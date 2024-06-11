@@ -94,7 +94,6 @@ const Courses_List = () => {
             <div className="card-deck">
                 {courses_list.map(course => {
                     if ((course.title != "CRR") && (course.title == selectedCourse || selectedCourse == "All")) {
-                        console.log("course.title",course.title ,"---->selectedCourse:",selectedCourse)
                         return (
                             <div className="card" key={course.id}>
                                 <img src={`../${course.img}`} className="card-img-top" alt={`${course.title}_${course.id}`} />

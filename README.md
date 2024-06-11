@@ -1,8 +1,13 @@
-# React + Vite
+# Course Website using React Router Dom
+In this module, a website with various Courses were segregated in Navigation bar. Based on the selection of respective Segment, list of courses will be displayed.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React Router Dom is used to route across various pages. Loaded the courses within same root element using Outlet. NavLink is used to route from one page to another link.
 
-Currently, two official plugins are available:
+Highlighted the Active navigation link using CSS style props.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Created a separate page for Careers to list out the Open Roles.
+
+Sample screenshot:
+
+
+***Author:Tharani K***
