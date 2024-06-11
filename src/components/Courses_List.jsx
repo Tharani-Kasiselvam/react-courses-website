@@ -100,7 +100,7 @@ const Courses_List = () => {
                                 <img src={`../${course.img}`} className="card-img-top" alt={`${course.title}_${course.id}`} />
                                 <div className="card-body">
                                     <h5 className="card-title">{course.course}</h5>
-                                    <br /><br />
+                                    <br />
                                     <p className="card-text"><small className="text-muted">By <b>{course.description}</b></small></p>
                                     <p className="card-text"><small className="text-muted">By <b>{course.date}</b></small>
                                         <small className="text-muted" style={{ marginLeft: "80px" }}>{course.duration}</small></p>

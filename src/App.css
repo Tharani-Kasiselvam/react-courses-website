@@ -1,3 +1,12 @@
+.nav-header{
+  margin: 30px;
+}
+.navbar-brand{
+  padding-left:20px;
+}
+.navbar{
+  border-bottom: 1px solid grey;  
+}
 .card-deck{
   display: flex;
   flex-wrap: wrap;
@@ -5,13 +14,13 @@
 }
 .card{
   width : 300px;
-  height: 500px;
+  height: 100px;
   margin : 10px;
   margin-left : 50px
 }
 .card-img-top{
   width : 200px;
-  height: 300px;
+  height: 200px;
 }
 
 .career-head{
@@ -32,3 +41,11 @@
 .btn-success{
   margin: 10px;
 }
+
+#nav-all a.active{
+      background: linear-gradient(90deg,#57e64a,#57e09e);
+      border-radius: 5px;
+      text-decoration: underline;
+  }
+
+
