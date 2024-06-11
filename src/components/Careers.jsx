@@ -78,19 +78,20 @@ const Careers = () => {
 
     return (
         <div className='career-head' style={{fontFamily:"Shadows Into Light"}}><h1>WE'RE HIRING</h1>
+            
             {careers_list.map(careers =>
                 <div className="card w-75" style={{padding:"30px",fontFamily:"Montserrat"}}  key={careers.id}>
                     {/* <p style={{ color: "#A6A7AC" }}><b>{pack_name}</b></p> */}
                     <h3 className="career-card-title"><b>{careers.role}</b></h3>
-                    <p className="career-card-text"><h5><b>{careers.role_cout}</b></h5></p>
-                    <p className="career-card-text">THINGS TO BE NOTED:<br /><br />
+                    <div className="career-card-text"><h5><b>{careers.role_cout}</b></h5></div>
+                    <div className="career-card-text">THINGS TO BE NOTED:<br /><br />
                     
-                    {careers.note.map(oneNote => 
-                        <p><FontAwesomeIcon icon={faCheck} style={{ color: '#05a305', fontWeight:'bold'}} /> {oneNote}</p>
+                    {careers.note.map(oneNote =>
+                        <div key={careers.id++}><FontAwesomeIcon icon={faCheck} style={{ color: '#05a305', fontWeight:'bold'}} /> {oneNote}</div>
                     )}
                     {condnlRole(careers.role_avail)}
                     
-                    </p>
+                    </div>
                 </div>
             )}
         </div>

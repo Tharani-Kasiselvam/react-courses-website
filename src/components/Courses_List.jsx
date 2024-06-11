@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import '../App.css'
+import { CoursesContext } from './Courses'
+import Careers from './Careers';
 
 const Courses_List = () => {
-    const [selectedCourse,setSelectedCourse] = useState("All")
+    const { selectedCourse } = useContext(CoursesContext);
     const courses_list = [
         {
             id: 1,
@@ -11,7 +13,7 @@ const Courses_List = () => {
             description: "Isha Sharma",
             date: "25 Mar, 2024",
             duration: "4 Min Read",
-            img : "fsd_1.jpg"
+            img: "fsd_1.jpg"
         },
         {
             id: 2,
@@ -20,7 +22,7 @@ const Courses_List = () => {
             description: " Meghana D",
             date: "26 Mar, 2024",
             duration: "3 Min Read",
-            img : "fsd_2.png"
+            img: "fsd_2.png"
         },
         {
             id: 3,
@@ -29,7 +31,7 @@ const Courses_List = () => {
             description: " Isha Sharma",
             date: "16 Apr, 2024",
             duration: "5 Min Read",
-            img : "fsd_3.jpg"
+            img: "fsd_3.jpg"
         },
         {
             id: 4,
@@ -38,7 +40,7 @@ const Courses_List = () => {
             description: " Saanchi Bharadwaj",
             date: "25 Mar, 2024",
             duration: "5 Min Read",
-            img : "ds_1.png"
+            img: "ds_1.png"
         },
         {
             id: 5,
@@ -47,7 +49,7 @@ const Courses_List = () => {
             description: " Jaishree Tomar",
             date: "16 Apr, 2024",
             duration: "6 Min Read",
-            img : "ds_2.png"
+            img: "ds_2.png"
         },
         {
             id: 6,
@@ -56,7 +58,7 @@ const Courses_List = () => {
             description: " Isha Sharma",
             date: "13 Dec, 2023",
             duration: "4 Min Read",
-            img : "ds_3.png"
+            img: "ds_3.png"
         },
         {
             id: 7,
@@ -65,7 +67,7 @@ const Courses_List = () => {
             description: " Tushar Vinosha",
             date: "08 Sep, 2023",
             duration: "4 Min Read",
-            img : "cys_1.png"
+            img: "cys_1.png"
         },
         {
             id: 8,
@@ -74,7 +76,7 @@ const Courses_List = () => {
             description: " Tushar Vinosha",
             date: "04 Oct, 2023",
             duration: "4 Min Read",
-            img : "cys_2.png"
+            img: "cys_2.png"
         },
         {
             id: 9,
@@ -83,32 +85,31 @@ const Courses_List = () => {
             description: " Srinithi Sankar",
             date: "23 Mar, 2024",
             duration: "3 Min Read",
-            img : "cys_3.png"
-        }    
+            img: "cys_3.png"
+        }
     ]
 
     return (
         <div>
             <div className="card-deck">
                 {courses_list.map(course => {
-                    if((course.title!="CRR") && (course.title=="ABC" || selectedCourse=="All")){
+                    if ((course.title != "CRR") && (course.title == selectedCourse || selectedCourse == "All")) {
+                        console.log("course.title",course.title ,"---->selectedCourse:",selectedCourse)
                         return (
-                <div className="card">
-                    <img src={`./${course.img}`} className="card-img-top" alt= {`${course.title}_${course.id}`} />
-                        <div className="card-body">
-                            <h5 className="card-title">{course.course}</h5>
-                            <br /><br />
-                            <p className="card-text"><small className="text-muted">By <b>{course.description}</b></small></p>
-                            <p className="card-text"><small className="text-muted">By <b>{course.date}</b></small>
-                                <small className="text-muted" style={{marginLeft:"80px"}}>{course.duration}</small></p>
-                        </div>
-                        </div>
+                            <div className="card" key={course.id}>
+                                <img src={`../${course.img}`} className="card-img-top" alt={`${course.title}_${course.id}`} />
+                                <div className="card-body">
+                                    <h5 className="card-title">{course.course}</h5>
+                                    <br /><br />
+                                    <p className="card-text"><small className="text-muted">By <b>{course.description}</b></small></p>
+                                    <p className="card-text"><small className="text-muted">By <b>{course.date}</b></small>
+                                        <small className="text-muted" style={{ marginLeft: "80px" }}>{course.duration}</small></p>
+                                </div>
+                            </div>
                         )
-                        }
                     }
-
-
-                    )}
+                }
+                )}
             </div>
         </div>
     )

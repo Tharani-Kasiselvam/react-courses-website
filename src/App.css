@@ -16,19 +16,13 @@
 
 .career-head{
     background: linear-gradient(90deg,#bccee4,#7bd6e4);
-    max-width : 75%;
+    max-width : 100%;
     text-align: center;
     padding: 10px;
 }
-.career-card{
-  width:300px;
-  background-color: white;
-  height:480px;
-  border-radius: 15px;
-  margin-top:25px;
-  font-family: Calibri;
+.card{
+  border-radius: 5px;
 }
-
 .career-card-text{
   text-align: left;
   font-size: 15px;

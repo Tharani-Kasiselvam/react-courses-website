@@ -10,11 +10,16 @@ const App = () => {
       element : <Courses />,
       children : [
         {
-          path : "courses",
+          // path : "courses",
+          index:"true",
           element : <Courses_List />
         },
         {
-          path : "careers",
+          path : "courses/:id",
+          element : <Courses_List />
+        },
+        {
+          path : "courses/Careers",
           element : <Careers />
         }
       ]
