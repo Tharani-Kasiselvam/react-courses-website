@@ -1,0 +1,40 @@
+.card-deck{
+  display: flex;
+  flex-wrap: wrap;
+  gap : 5px
+}
+.card{
+  width : 300px;
+  height: 500px;
+  margin : 10px;
+  margin-left : 50px
+}
+.card-img-top{
+  width : 200px;
+  height: 300px;
+}
+
+.career-head{
+    background: linear-gradient(90deg,#bccee4,#7bd6e4);
+    max-width : 75%;
+    text-align: center;
+    padding: 10px;
+}
+.career-card{
+  width:300px;
+  background-color: white;
+  height:480px;
+  border-radius: 15px;
+  margin-top:25px;
+  font-family: Calibri;
+}
+
+.career-card-text{
+  text-align: left;
+  font-size: 15px;
+  font-family: Calibri;
+}
+
+.btn-success{
+  margin: 10px;
+}
