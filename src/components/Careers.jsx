@@ -58,6 +58,8 @@ const Careers = () => {
     ]
 
     function condnlRole(isRoleavail){
+
+        // Task Download button is enabled based on the Role availability
         if(isRoleavail=='Y'){
             return(
                 <div>
@@ -78,10 +80,10 @@ const Careers = () => {
 
     return (
         <div className='career-head' style={{fontFamily:"Shadows Into Light"}}><h1>WE'RE HIRING</h1>
-            
+            {/* created a seperate Component to handle Careers portal as the data are different from Courses */}
+            {/* Iterating the Careers option and loading it into the Component with FontAwesom icons */}
             {careers_list.map(careers =>
                 <div className="card w-75" style={{padding:"30px",fontFamily:"Montserrat"}}  key={careers.id}>
-                    {/* <p style={{ color: "#A6A7AC" }}><b>{pack_name}</b></p> */}
                     <h3 className="career-card-title"><b>{careers.role}</b></h3>
                     <div className="career-card-text"><h5><b>{careers.role_cout}</b></h5></div>
                     <div className="career-card-text">THINGS TO BE NOTED:<br /><br />

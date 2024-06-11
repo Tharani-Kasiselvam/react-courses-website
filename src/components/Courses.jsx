@@ -6,7 +6,10 @@ import '../App.css'
 const Courses = () => {
     const [selectedCourse, setSelectedCourse] = useState("All")
 
+    // This method is used to maintain the state for the selected course
     const onNavLinkClick = (e) => {
+
+        // capturing the innerText of the selected course and setting it to the state
         if (e.target.innerText == "Full Stack Development")
             setSelectedCourse("FSD")
 
@@ -22,6 +25,7 @@ const Courses = () => {
         else if (e.target.innerText == "Courses")
             setSelectedCourse("All")
 
+        //by default All the courses will be listed
         else
             setSelectedCourse("All")
     }
@@ -29,7 +33,9 @@ const Courses = () => {
 
     return (
         <div>
+            {/* Created ContextAPI to use the data across different components */}
             <CoursesContext.Provider value={{ selectedCourse }}>
+                {/* Navigation with List of Courses in Segment wise */}
                 <div className="nav-header">
                     <div className="container-fluid">
                         <nav className="navbar navbar-expand-lg navbar-light">
@@ -39,8 +45,10 @@ const Courses = () => {
                             </button>
 
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                                {/* Defined styles to highlight the selected Nav item with a color and underline */}
                                 <ul className="navbar-nav" id="nav-all">
                                     <li className="nav-item">
+
                                         <NavLink className="nav-link" to="/courses/All"
                                             style={isActive => ({
                                                 color: isActive ? "black" : "gray"

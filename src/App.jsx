@@ -10,7 +10,6 @@ const App = () => {
       element : <Courses />,
       children : [
         {
-          // path : "courses",
           index:"true",
           element : <Courses_List />
         },
@@ -23,14 +22,8 @@ const App = () => {
           element : <Careers />
         }
       ]
-    },
-    {
-      path : "/all",
-      element : <h1>Display all the courses</h1>
-    },
-    
+    }    
   ])
-
 
   return <RouterProvider router={router} />
 }

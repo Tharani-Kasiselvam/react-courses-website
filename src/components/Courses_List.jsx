@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import '../App.css'
 import { CoursesContext } from './Courses'
-import Careers from './Careers';
 
 const Courses_List = () => {
     const { selectedCourse } = useContext(CoursesContext);
@@ -92,6 +91,7 @@ const Courses_List = () => {
     return (
         <div>
             <div className="card-deck">
+                {/* Iterating the list of courses and storing it into Cards based on the Course selection */}
                 {courses_list.map(course => {
                     if ((course.title != "CRR") && (course.title == selectedCourse || selectedCourse == "All")) {
                         return (
